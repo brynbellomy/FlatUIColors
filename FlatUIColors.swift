@@ -33,26 +33,33 @@ public struct FlatUIColors
             colorString = colorString.fui_substringFromIndex(1)
         }
 
-        if colorString.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) != 6 {
-            return OSColor.grayColor()
+        let stringLength = countElements(colorString)
+        if stringLength != 6 && stringLength != 8 {
+            return nil
         }
 
         var rString = colorString.fui_substringToIndex(2)
         var gString = colorString.fui_substringFromIndex(2).fui_substringToIndex(2)
         var bString = colorString.fui_substringFromIndex(4).fui_substringToIndex(2)
+        var aString : String?
+        if stringLength == 8 { aString = colorString.fui_substringFromIndex(6).fui_substringToIndex(2) }
 
         var r: CUnsignedInt = 0
         var g: CUnsignedInt = 0
         var b: CUnsignedInt = 0
+        var a: CUnsignedInt = 1
 
         NSScanner(string:rString).scanHexInt(&r)
         NSScanner(string:gString).scanHexInt(&g)
         NSScanner(string:bString).scanHexInt(&b)
+        if let aString = aString? {
+            NSScanner(string:aString).scanHexInt(&a)
+        }
 
         let red     = CGFloat(r) / 255.0
         let green   = CGFloat(g) / 255.0
         let blue    = CGFloat(b) / 255.0
-        let alpha   = CGFloat(1)
+        let alpha   = CGFloat(a) / 255.0
         return OSColor(red:red, green:green, blue:blue, alpha:alpha)
     }
 
