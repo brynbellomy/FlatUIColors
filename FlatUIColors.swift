@@ -33,7 +33,7 @@ public struct FlatUIColors
             colorString = colorString.fui_substringFromIndex(1)
         }
 
-        let stringLength = countElements(colorString)
+        let stringLength = count(colorString)
         if stringLength != 6 && stringLength != 8 {
             return nil
         }
@@ -52,7 +52,7 @@ public struct FlatUIColors
         NSScanner(string:rString).scanHexInt(&r)
         NSScanner(string:gString).scanHexInt(&g)
         NSScanner(string:bString).scanHexInt(&b)
-        if let aString = aString? {
+        if let aString = aString {
             NSScanner(string:aString).scanHexInt(&a)
         }
 
