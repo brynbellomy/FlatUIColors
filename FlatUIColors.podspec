@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.platform = :osx, '10.10'
   s.ios.deployment_target = '8.1'
   s.source_files = '*.swift'
+  s.requires_arc = true
 
   s.source = { :git => 'https://github.com/brynbellomy/FlatUIColors.git', :tag => s.version }
 end
