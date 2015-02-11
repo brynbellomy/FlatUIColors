@@ -1,10 +1,10 @@
 
 # FlatUIColors (swift)
 
-[![CocoaPods](https://img.shields.io/cocoapods/v/SwiftFlatUIColors.svg?style=flat)](http://cocoadocs.org/docsets/SwiftFlatUIColors)
-[![CocoaPods](https://img.shields.io/cocoapods/p/SwiftFlatUIColors.svg?style=flat)](http://cocoadocs.org/docsets/SwiftFlatUIColors)
-[![CocoaPods](https://img.shields.io/cocoapods/l/SwiftFlatUIColors.svg?style=flat)](http://cocoadocs.org/docsets/SwiftFlatUIColors)
-[![GitHub tag](https://img.shields.io/github/tag/brynbellomy/SwiftFlatUIColors.svg?style=flat)]()
+[![CocoaPods](https://img.shields.io/cocoapods/v/FlatUIColors.svg?style=flat)](http://cocoadocs.org/docsets/FlatUIColors)
+[![CocoaPods](https://img.shields.io/cocoapods/p/FlatUIColors.svg?style=flat)](http://cocoadocs.org/docsets/FlatUIColors)
+[![CocoaPods](https://img.shields.io/cocoapods/l/FlatUIColors.svg?style=flat)](http://cocoadocs.org/docsets/FlatUIColors)
+[![GitHub tag](https://img.shields.io/github/tag/brynbellomy/FlatUIColors.svg?style=flat)]()
 
 
 # install
@@ -14,7 +14,7 @@ Make sure you have the latest pre-release version of [CocoaPods](http://cocoapod
 Add to your `Podfile`:
 
 ```ruby
-pod 'SwiftFlatUIColors'
+pod 'FlatUIColors'
 ```
 
 And then from the shell:
@@ -33,7 +33,7 @@ is a platform-aware `typealias`.
 Just `import` and use:
 
 ```swift
-import SwiftFlatUIColors
+import FlatUIColors
 
 let turquoise: NSColor = FlatUIColors.turquoiseColor()
 ```
