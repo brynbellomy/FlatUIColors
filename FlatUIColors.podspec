@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
   s.name = 'FlatUIColors'
   s.version = '0.1.0'
-  s.license = 'WTFPL'
+  s.license = 'MIT'
   s.summary = 'Flat UI color palette as NS/UIColor objects (in Swift).'
   s.authors = { 'bryn austin bellomy' => 'bryn.bellomy@gmail.com' }
   s.homepage = 'https://github.com/brynbellomy/FlatUIColors'
