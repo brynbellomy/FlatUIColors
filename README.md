@@ -6,6 +6,8 @@
 [![CocoaPods](https://img.shields.io/cocoapods/l/FlatUIColors.svg?style=flat)](http://cocoadocs.org/docsets/FlatUIColors)
 [![GitHub tag](https://img.shields.io/github/tag/brynbellomy/FlatUIColors.svg?style=flat)]()
 
+<img src="http://f.cl.ly/items/3P1Z1o3E0M103M2O4437/Image%202015-04-10%20at%2020%3A00%3A10.png" />
+
 
 # install
 
