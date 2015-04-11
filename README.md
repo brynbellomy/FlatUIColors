@@ -36,6 +36,7 @@ Just `import` and use:
 import FlatUIColors
 
 let turquoise: NSColor = FlatUIColors.turquoiseColor()
+
 // Optional CGFloat for setting alpha value
 let emerald: UIColor = FlatUIColors.emeraldColor(0.25)
 ```
