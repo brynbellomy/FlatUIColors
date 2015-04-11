@@ -63,7 +63,7 @@ public static func concreteColor() -> OSColor!
 public static func asbestosColor() -> OSColor!
 ```
 
-![Colors Palette](https://github.com/kexoth/FlatUIColors/ColorsPalette.png)
+![Colors Palette](https://github.com/kexoth/FlatUIColors/blob/master/ColorsPalette.png)
 
 # contributors / authors
 
