@@ -38,6 +38,9 @@ Just `import` and use:
 import FlatUIColors
 
 let turquoise: NSColor = FlatUIColors.turquoiseColor()
+
+// Optional CGFloat for setting alpha value
+let emerald: UIColor = FlatUIColors.emeraldColor(0.25)
 ```
 
 The following is a list of all of the static color functions defined on `struct FlatUIColors`.
@@ -65,7 +68,7 @@ public static func concreteColor() -> OSColor!
 public static func asbestosColor() -> OSColor!
 ```
 
-
+![Colors Palette](https://github.com/kexoth/FlatUIColors/blob/master/ColorsPalette.png)
 
 # contributors / authors
 
