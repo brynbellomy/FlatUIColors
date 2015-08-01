@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E75D450B-3300-40FA-AA29-31A1CD8E2FE9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FlatUIColors</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BA5AFB8C9E3006664D0CCD6955447BFC3F224893</key>
+		<string>github.com:morizotter/FlatUIColors.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FlatUIColors.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BA5AFB8C9E3006664D0CCD6955447BFC3F224893</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:morizotter/FlatUIColors.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BA5AFB8C9E3006664D0CCD6955447BFC3F224893</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BA5AFB8C9E3006664D0CCD6955447BFC3F224893</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FlatUIColors</string>
+		</dict>
+	</array>
+</dict>
+</plist>
