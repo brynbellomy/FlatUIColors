@@ -23,7 +23,7 @@ public struct FlatUIColors
     /**
         Generates an NS- or UIColor from a hex color string.
 
-        :param: hex The hex color string from which to create the color object.  '#' sign is optional.
+        - parameter hex: The hex color string from which to create the color object.  '#' sign is optional.
      */
     public static func colorFromHexCode(hex:String) -> OSColor!
     {
@@ -33,14 +33,14 @@ public struct FlatUIColors
             colorString = colorString.fui_substringFromIndex(1)
         }
 
-        let stringLength = count(colorString)
+        let stringLength = colorString.characters.count
         if stringLength != 6 && stringLength != 8 {
             return nil
         }
 
-        var rString = colorString.fui_substringToIndex(2)
-        var gString = colorString.fui_substringFromIndex(2).fui_substringToIndex(2)
-        var bString = colorString.fui_substringFromIndex(4).fui_substringToIndex(2)
+        let rString = colorString.fui_substringToIndex(2)
+        let gString = colorString.fui_substringFromIndex(2).fui_substringToIndex(2)
+        let bString = colorString.fui_substringFromIndex(4).fui_substringToIndex(2)
         var aString : String?
         if stringLength == 8 { aString = colorString.fui_substringFromIndex(6).fui_substringToIndex(2) }
 
@@ -70,7 +70,7 @@ public struct FlatUIColors
         } else { return "FF" }
     }
 
-    public static func turquoiseColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.turquoise + alphaHEX(alpha)) }
+    public static func turquoiseColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.turquoise + alphaHEX(alpha)) }
     public static func greenSeaColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.greenSea + alphaHEX(alpha)) }
     public static func emeraldColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.emerald + alphaHEX(alpha)) }
     public static func nephritisColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.nephritis + alphaHEX(alpha)) }
@@ -124,7 +124,7 @@ private extension String
 {
     func fui_substringFromIndex(index: Int) -> String
     {
-        let newStart = advance(startIndex, index)
+        let newStart = startIndex.advancedBy(index)
         return self[newStart ..< endIndex]
     }
 
@@ -132,7 +132,7 @@ private extension String
 
     func fui_substringToIndex(index: Int) -> String
     {
-        let newEnd = advance(startIndex, index)
+        let newEnd = startIndex.advancedBy(index)
         return self[startIndex ..< newEnd]
     }
 }
