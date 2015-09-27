@@ -101,6 +101,8 @@
 		90B220D51B6D577500A5CC8C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = FlatUIColors;
 				TargetAttributes = {
