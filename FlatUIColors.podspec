@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/brynbellomy/FlatUIColors'
 
   s.platform = :osx, '10.10'
-  s.ios.deployment_target = '8.1'
+  s.ios.deployment_target = '8.0'
   s.source_files = '*.swift'
   s.requires_arc = true
 
