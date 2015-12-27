@@ -105,10 +105,10 @@ public struct FlatUIColors
     public static func cloudsColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.clouds + alphaHEX(alpha)) }
     public static func silverColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.silver + alphaHEX(alpha)) }
     public static func galleryColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.gallery + alphaHEX(alpha)) }
-    public static func pumiceColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.pumice + alphaHEX(alpha)) }
+    public static func ironColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.iron + alphaHEX(alpha)) }
     public static func concreteColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.concrete + alphaHEX(alpha)) }
     public static func asbestosColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.asbestos + alphaHEX(alpha)) }
-    public static func cascadeColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.cascade + alphaHEX(alpha)) }
+    public static func pumiceColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.pumice + alphaHEX(alpha)) }
     public static func lynchColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.lynch + alphaHEX(alpha)) }
 
     /**
@@ -138,7 +138,7 @@ public struct FlatUIColors
         public static let ebonyClay = "22313F"
         public static let sunflower = "F1C40F"
         public static let tangerine = "F39C12"
-        public static let confetti = "#E9D460"
+        public static let confetti = "E9D460"
         public static let capeHoney = "FDE3A7"
         public static let carrot = "E67E22"
         public static let pumpkin = "D35400"
@@ -151,10 +151,10 @@ public struct FlatUIColors
         public static let clouds = "ECF0F1"
         public static let silver = "BDC3C7"
         public static let gallery = "EEEEEE"
-        public static let pumice = "D2D7D3"
+        public static let iron = "DADFE1"
         public static let concrete = "95A5A6"
         public static let asbestos = "7F8C8D"
-        public static let cascade = "95A5A6"
+        public static let pumice = "D2D7D3"
         public static let lynch = "6C7A89"
     }
 }
