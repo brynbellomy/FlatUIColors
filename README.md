@@ -93,6 +93,6 @@ public static func lynchColor() -> OSColor!
 
 bryn austin bellomy < <bryn.bellomy@gmail.com> >
 aleksandar kex trpeski < <kex@pristap.com> >
-valentine silvansky <[silvansky](https://github.com/silvansky)>
+valentine silvansky < <[silvansky](https://github.com/silvansky)> >
 morita naoki < <namorit@gmail.com> >
-angel vazquez <[@avzquez](https://twitter.com/avzquez)>
+angel vazquez < <[@avzquez](https://twitter.com/avzquez)> > 
