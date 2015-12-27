@@ -76,7 +76,7 @@ public struct FlatUIColors
     public static func lightSeaGreenColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.lightSeaGreen + alphaHEX(alpha)) }
     public static func emeraldColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.emerald + alphaHEX(alpha)) }
     public static func nephritisColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.nephritis + alphaHEX(alpha)) }
-    public static func shamrockColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.shamrock + alphaHEX(alpha)) }
+    public static func gossipColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.gossip + alphaHEX(alpha)) }
     public static func salemColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.salem + alphaHEX(alpha)) }
     public static func peterRiverColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.peterRiver + alphaHEX(alpha)) }
     public static func belizeHoleColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.belizeHole + alphaHEX(alpha)) }
@@ -122,7 +122,7 @@ public struct FlatUIColors
         public static let lightSeaGreen = "1BA39C"
         public static let emerald  = "2ecc71"
         public static let nephritis = "27ae60"
-        public static let shamrock = "2ECC71"
+        public static let gossip = "87D37C"
         public static let salem = "1E824C"
         public static let peterRiver = "3498D8"
         public static let belizeHole = "2980b9"
