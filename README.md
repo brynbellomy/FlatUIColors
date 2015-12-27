@@ -75,7 +75,7 @@ public static func jaffaColor() -> OSColor!
 public static func alizarinColor() -> OSColor!
 public static func pomegranateColor() -> OSColor!
 public static func monzaColor() -> OSColor!
-public static func thunderBirdColor(alpha: CGFloat = 1.0) -> OSColor!
+public static func thunderBirdColor() -> OSColor!
 public static func cloudsColor() -> OSColor!
 public static func silverColor() -> OSColor!
 public static func galleryColor() -> OSColor!
