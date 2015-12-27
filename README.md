@@ -91,8 +91,8 @@ public static func lynchColor() -> OSColor!
 # contributors / authors
 
 
-bryn austin bellomy < <bryn.bellomy@gmail.com> >
-aleksandar kex trpeski < <kex@pristap.com> >
-valentine silvansky < <[silvansky](https://github.com/silvansky)> >
-morita naoki < <namorit@gmail.com> >
-angel vazquez < <[@avzquez](https://twitter.com/avzquez)> > 
+bryn austin bellomy < <bryn.bellomy@gmail.com> >  
+aleksandar kex trpeski < <kex@pristap.com> >  
+valentine silvansky < [silvansky](https://github.com/silvansky) >  
+morita naoki < <namorit@gmail.com> >  
+angel vazquez < [@avzquez](https://twitter.com/avzquez) >
