@@ -86,7 +86,7 @@ public static func pumiceColor() -> OSColor!
 public static func lynchColor() -> OSColor!
 ```
 
-![Colors Palette](https://github.com/avazquezpr/FlatUIColors/blob/master/ColorsPalette.png)
+![Colors Palette](https://github.com/brynbellomy/FlatUIColors/blob/master/ColorsPalette.png)
 
 # contributors / authors
 
