@@ -25,9 +25,9 @@ public struct FlatUIColors
 
         - parameter hex: The hex color string from which to create the color object.  '#' sign is optional.
      */
-    public static func colorFromHexCode(hex:String) -> OSColor!
+    public static func colorFromHexCode(_ hex:String) -> OSColor!
     {
-        var colorString: String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercaseString
+        var colorString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
         if colorString.hasPrefix("#") {
             colorString = colorString.fui_substringFromIndex(1)
@@ -49,11 +49,11 @@ public struct FlatUIColors
         var b: CUnsignedInt = 0
         var a: CUnsignedInt = 1
 
-        NSScanner(string:rString).scanHexInt(&r)
-        NSScanner(string:gString).scanHexInt(&g)
-        NSScanner(string:bString).scanHexInt(&b)
+        Scanner(string:rString).scanHexInt32(&r)
+        Scanner(string:gString).scanHexInt32(&g)
+        Scanner(string:bString).scanHexInt32(&b)
         if let aString = aString {
-            NSScanner(string:aString).scanHexInt(&a)
+            Scanner(string:aString).scanHexInt32(&a)
         }
 
         let red     = CGFloat(r) / 255.0
@@ -63,53 +63,53 @@ public struct FlatUIColors
         return OSColor(red:red, green:green, blue:blue, alpha:alpha)
     }
 
-    private static func alphaHEX(alpha: CGFloat) -> String {
+    fileprivate static func alphaHEX(_ alpha: CGFloat) -> String {
         
         if alpha <= 1 {
             return String(Int(alpha * 255), radix: 16, uppercase: true)
         } else { return "FF" }
     }
 
-    public static func turquoiseColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.turquoise + alphaHEX(alpha)) }
-    public static func greenSeaColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.greenSea + alphaHEX(alpha)) }
-    public static func mediumTurquoiseColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.mediumTurquoise + alphaHEX(alpha)) }
-    public static func lightSeaGreenColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.lightSeaGreen + alphaHEX(alpha)) }
-    public static func emeraldColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.emerald + alphaHEX(alpha)) }
-    public static func nephritisColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.nephritis + alphaHEX(alpha)) }
-    public static func gossipColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.gossip + alphaHEX(alpha)) }
-    public static func salemColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.salem + alphaHEX(alpha)) }
-    public static func peterRiverColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.peterRiver + alphaHEX(alpha)) }
-    public static func belizeHoleColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.belizeHole + alphaHEX(alpha)) }
-    public static func riptideColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.riptide + alphaHEX(alpha)) }
-    public static func dodgerBlueColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.dodgerBlue + alphaHEX(alpha)) }
-    public static func amethystColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.amethyst + alphaHEX(alpha)) }
-    public static func wisteriaColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.wisteria + alphaHEX(alpha)) }
-    public static func lightWisteriaColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.lightWisteria + alphaHEX(alpha)) }
-    public static func plumColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.plum + alphaHEX(alpha)) }
-    public static func wetAsphaltColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.wetAsphalt + alphaHEX(alpha)) }
-    public static func midnightBlueColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.midnightBlue + alphaHEX(alpha)) }
-    public static func hokiColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.hoki + alphaHEX(alpha)) }
-    public static func ebonyClayColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.ebonyClay + alphaHEX(alpha)) }
-    public static func sunflowerColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.sunflower + alphaHEX(alpha)) }
-    public static func tangerineColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.tangerine + alphaHEX(alpha)) }
-    public static func confettiColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.confetti + alphaHEX(alpha)) }
-    public static func capeHoneyColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.capeHoney + alphaHEX(alpha)) }
-    public static func carrotColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.carrot + alphaHEX(alpha)) }
-    public static func pumpkinColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.pumpkin + alphaHEX(alpha)) }
-    public static func ecstasyColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.ecstasy + alphaHEX(alpha)) }
-    public static func jaffaColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.jaffa + alphaHEX(alpha)) }
-    public static func alizarinColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.alizarin + alphaHEX(alpha)) }
-    public static func pomegranateColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.pomegranate + alphaHEX(alpha)) }
-    public static func monzaColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.monza + alphaHEX(alpha)) }
-    public static func thunderBirdColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.thunderbird + alphaHEX(alpha)) }
-    public static func cloudsColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.clouds + alphaHEX(alpha)) }
-    public static func silverColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.silver + alphaHEX(alpha)) }
-    public static func galleryColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.gallery + alphaHEX(alpha)) }
-    public static func ironColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.iron + alphaHEX(alpha)) }
-    public static func concreteColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.concrete + alphaHEX(alpha)) }
-    public static func asbestosColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.asbestos + alphaHEX(alpha)) }
-    public static func pumiceColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.pumice + alphaHEX(alpha)) }
-    public static func lynchColor(alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.lynch + alphaHEX(alpha)) }
+    public static func turquoiseColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.turquoise + alphaHEX(alpha)) }
+    public static func greenSeaColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.greenSea + alphaHEX(alpha)) }
+    public static func mediumTurquoiseColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.mediumTurquoise + alphaHEX(alpha)) }
+    public static func lightSeaGreenColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.lightSeaGreen + alphaHEX(alpha)) }
+    public static func emeraldColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.emerald + alphaHEX(alpha)) }
+    public static func nephritisColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.nephritis + alphaHEX(alpha)) }
+    public static func gossipColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.gossip + alphaHEX(alpha)) }
+    public static func salemColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.salem + alphaHEX(alpha)) }
+    public static func peterRiverColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.peterRiver + alphaHEX(alpha)) }
+    public static func belizeHoleColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.belizeHole + alphaHEX(alpha)) }
+    public static func riptideColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.riptide + alphaHEX(alpha)) }
+    public static func dodgerBlueColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.dodgerBlue + alphaHEX(alpha)) }
+    public static func amethystColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.amethyst + alphaHEX(alpha)) }
+    public static func wisteriaColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.wisteria + alphaHEX(alpha)) }
+    public static func lightWisteriaColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.lightWisteria + alphaHEX(alpha)) }
+    public static func plumColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.plum + alphaHEX(alpha)) }
+    public static func wetAsphaltColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.wetAsphalt + alphaHEX(alpha)) }
+    public static func midnightBlueColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.midnightBlue + alphaHEX(alpha)) }
+    public static func hokiColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.hoki + alphaHEX(alpha)) }
+    public static func ebonyClayColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.ebonyClay + alphaHEX(alpha)) }
+    public static func sunflowerColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.sunflower + alphaHEX(alpha)) }
+    public static func tangerineColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.tangerine + alphaHEX(alpha)) }
+    public static func confettiColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.confetti + alphaHEX(alpha)) }
+    public static func capeHoneyColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.capeHoney + alphaHEX(alpha)) }
+    public static func carrotColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.carrot + alphaHEX(alpha)) }
+    public static func pumpkinColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.pumpkin + alphaHEX(alpha)) }
+    public static func ecstasyColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.ecstasy + alphaHEX(alpha)) }
+    public static func jaffaColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.jaffa + alphaHEX(alpha)) }
+    public static func alizarinColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.alizarin + alphaHEX(alpha)) }
+    public static func pomegranateColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.pomegranate + alphaHEX(alpha)) }
+    public static func monzaColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.monza + alphaHEX(alpha)) }
+    public static func thunderBirdColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.thunderbird + alphaHEX(alpha)) }
+    public static func cloudsColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.clouds + alphaHEX(alpha)) }
+    public static func silverColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.silver + alphaHEX(alpha)) }
+    public static func galleryColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.gallery + alphaHEX(alpha)) }
+    public static func ironColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.iron + alphaHEX(alpha)) }
+    public static func concreteColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.concrete + alphaHEX(alpha)) }
+    public static func asbestosColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.asbestos + alphaHEX(alpha)) }
+    public static func pumiceColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.pumice + alphaHEX(alpha)) }
+    public static func lynchColor(_ alpha: CGFloat = 1.0) -> OSColor! { return FlatUIColors.colorFromHexCode(ColorCodes.lynch + alphaHEX(alpha)) }
 
     /**
         Contains hex color code strings for the Flat UI color palette.
@@ -162,17 +162,17 @@ public struct FlatUIColors
 
 private extension String
 {
-    func fui_substringFromIndex(index: Int) -> String
+    func fui_substringFromIndex(_ index: Int) -> String
     {
-        let newStart = startIndex.advancedBy(index)
+        let newStart = characters.index(startIndex, offsetBy: index)
         return self[newStart ..< endIndex]
     }
 
 
 
-    func fui_substringToIndex(index: Int) -> String
+    func fui_substringToIndex(_ index: Int) -> String
     {
-        let newEnd = startIndex.advancedBy(index)
+        let newEnd = characters.index(startIndex, offsetBy: index)
         return self[startIndex ..< newEnd]
     }
 }
