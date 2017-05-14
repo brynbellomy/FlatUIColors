@@ -158,7 +158,7 @@ public struct FlatUIColors
         public static let lynch = "6C7A89"
     }
     
-    public func allColors() -> [(color: UIColor, name: String)]
+    public static func allColors() -> [(color: UIColor, name: String)]
     {
         return [
             (FlatUIColors.turquoise(), "Turquoise"),
