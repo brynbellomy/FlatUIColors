@@ -165,7 +165,7 @@ private extension String
     func fui_substringFromIndex(_ index: Int) -> String
     {
         let newStart = characters.index(startIndex, offsetBy: index)
-        return self[newStart ..< endIndex]
+        return String(self[newStart ..< endIndex])
     }
 
 
@@ -173,7 +173,7 @@ private extension String
     func fui_substringToIndex(_ index: Int) -> String
     {
         let newEnd = characters.index(startIndex, offsetBy: index)
-        return self[startIndex ..< newEnd]
+        return String(self[startIndex ..< newEnd])
     }
 }
 
