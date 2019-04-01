@@ -157,15 +157,59 @@ public struct FlatUIColors
         public static let pumice = "D2D7D3"
         public static let lynch = "6C7A89"
     }
+    
+    public static func allColors() -> [(color: UIColor, name: String)]
+    {
+        return [
+            (FlatUIColors.turquoise(), "Turquoise"),
+            (FlatUIColors.greenSea(), "Green Sea"),
+            (FlatUIColors.mediumTurquoise(), "Medium Turquoise"),
+            (FlatUIColors.lightSeaGreen(), "Light Sea Green"),
+            (FlatUIColors.emerald(), "Emerald"),
+            (FlatUIColors.nephritis(), "Nephritis"),
+            (FlatUIColors.gossip(), "Gossip"),
+            (FlatUIColors.salem(), "Salem"),
+            (FlatUIColors.peterRiver(), "Peter River"),
+            (FlatUIColors.belizeHole(), "Belize Hole"),
+            (FlatUIColors.riptide(), "Riptide"),
+            (FlatUIColors.dodgerBlue(), "Dodger Blue"),
+            (FlatUIColors.amethyst(), "Amethyst"),
+            (FlatUIColors.wisteria(), "Wisteria"),
+            (FlatUIColors.lightWisteria(), "Light Wisteria"),
+            (FlatUIColors.plum(), "Plum"),
+            (FlatUIColors.wetAsphalt(), "Wet Asphalt"),
+            (FlatUIColors.midnightBlue(), "Midnight Blue"),
+            (FlatUIColors.hoki(), "Hoki"),
+            (FlatUIColors.ebonyClay(), "Ebony Clay"),
+            (FlatUIColors.sunflower(), "Sunflower"),
+            (FlatUIColors.tangerine(), "Tangerine"),
+            (FlatUIColors.confetti(), "Confetti"),
+            (FlatUIColors.capeHoney(), "Cape Honey"),
+            (FlatUIColors.carrot(), "Carrot"),
+            (FlatUIColors.pumpkin(), "Pumpkin"),
+            (FlatUIColors.ecstasy(), "Ecstasy"),
+            (FlatUIColors.jaffa(), "Jaffa"),
+            (FlatUIColors.alizarin(), "Alizarin"),
+            (FlatUIColors.pomegranate(), "Pomegranate"),
+            (FlatUIColors.monza(), "Monza"),
+            (FlatUIColors.thunderBird(), "Thunderbird"),
+            (FlatUIColors.silver(), "Silver"),
+            (FlatUIColors.gallery(), "Gallery"),
+            (FlatUIColors.iron(), "Iron"),
+            (FlatUIColors.concrete(), "Concrete"),
+            (FlatUIColors.asbestos(), "Asbestos"),
+            (FlatUIColors.pumice(), "Pumice"),
+            (FlatUIColors.lynch(), "Lynch")
+        ]
+    }
 }
-
 
 private extension String
 {
     func fui_substringFromIndex(_ index: Int) -> String
     {
         let newStart = characters.index(startIndex, offsetBy: index)
-        return self[newStart ..< endIndex]
+        return String(self[newStart ..< endIndex])
     }
 
 
@@ -173,7 +217,7 @@ private extension String
     func fui_substringToIndex(_ index: Int) -> String
     {
         let newEnd = characters.index(startIndex, offsetBy: index)
-        return self[startIndex ..< newEnd]
+        return String(self[startIndex ..< newEnd])
     }
 }
 
